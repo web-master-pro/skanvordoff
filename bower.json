@@ -1,0 +1,22 @@
+{
+  "name": "Skanvordoff",
+  "authors": [
+    "Alexey Dobrov <mail@web-master-pro.ru>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.4"
+  }
+}

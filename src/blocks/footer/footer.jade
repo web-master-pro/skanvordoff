@@ -1,0 +1,7 @@
+include ../bottom-menu/bottom-menu
+
+mixin footer()
+    footer.footer&attributes(attributes)
+        .footer__in
+            +bottom-menu(class="footer__menu")
+            p.footer__copyright &copy; 2016 Copyright Skanvordoff

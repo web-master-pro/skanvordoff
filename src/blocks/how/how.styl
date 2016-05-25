@@ -1,0 +1,141 @@
+.how
+    width 100%
+    padding-top 40px
+    padding-bottom 24px
+
+    &__main
+        display block
+        width 100%
+        background-color white
+        border 1px solid #ebebeb
+        border-radius 3px
+        box-shadow 0 0 18px rgba(0, 0, 0, 0.08)
+        padding 40px 30px 30px
+        margin 0 0 10px
+        position relative
+        +below(768px)
+            padding-left 20px
+            padding-right 20px
+        &::before
+            content ""
+            display block
+            width 48px
+            height 48px
+            background-image embedurl("../../svg/zoom.svg", "")
+            background-position 0 0
+            background-repeat no-repeat
+            background-size contain
+            position absolute
+            top 34px
+            left 10px
+
+        p
+            color #3d3d3d
+            font()
+            font-size 17px
+            line-height 1.29
+            margin 0 0 1.25em
+
+    &__title
+        color #212121
+        font()
+        font-size 28px
+        line-height 1
+        position relative
+        margin 0 0 26px
+
+    &__options
+        padding 0
+        display flex
+        flex-flow row nowrap
+        justify-content space-between
+        +below(1010px)
+            flex-wrap wrap
+
+    &__option
+        display block
+        background-color white
+        border 1px solid #ebebeb
+        border-radius 3px
+        box-shadow 0 0 18px rgba(0, 0, 0, 0.08)
+        padding 39px 15px 25px 30px
+        margin-bottom 10px
+        flex 1 1 320px
+
+        &:nth-child(1)
+        &:nth-child(2)
+            margin-right 10px
+
+        +below(1010px)
+            &:nth-child(1)
+                flex 1 0 40%
+            &:nth-child(2)
+                margin-right 0
+                flex 1 0 40%
+            &:nth-child(3)
+                flex 1 1 100%
+        +below(768px)
+            padding-left 20px
+            &:nth-child(1)
+            &:nth-child(2)
+            &:nth-child(3)
+                margin-right 0
+                flex 1 1 100%
+
+        p
+            color #3d3d3d
+            font()
+            font-size 16px
+            line-height 1.375
+            margin 0 0 1em
+
+    &__option-title
+        color #3d3d3d
+        font(Medium)
+        font-size 17px
+        line-height 1
+        padding-left 30px
+        margin 0 0 1em
+        position relative
+        &--mask
+            padding-left 25px
+            &::before
+                content ""
+                display block
+                width 21px
+                height 23px
+                background-image embedurl("../../svg/mask.svg", "")
+                background-position 0 0
+                background-repeat no-repeat
+                background-size contain
+                position absolute
+                top -3px
+                left -7px
+        &--definition
+            padding-left 25px
+            &::before
+                content ""
+                display block
+                width 32px
+                height 10px
+                background-image embedurl("../../svg/definition.svg", "")
+                background-position 0 0
+                background-repeat no-repeat
+                background-size contain
+                position absolute
+                top 4px
+                left -14px
+        &--letters
+            padding-left 25px
+            &::before
+                content ""
+                display block
+                width 22px
+                height 22px
+                background-image embedurl("../../svg/letters.svg", "")
+                background-position 0 0
+                background-repeat no-repeat
+                background-size contain
+                position absolute
+                top -2px
+                left -6px
