@@ -1,6 +1,7 @@
 include ../blocks/browsehappy/browsehappy
 include ../blocks/header/header
 include ../blocks/how/how
+include ../blocks/requests/requests
 include ../blocks/footer/footer
 
 doctype html
@@ -48,9 +49,9 @@ html(lang="ru-RU")
         .content
             main.main
                 +how()
-                //- +queries()
+                +requests()
         +footer()
-        
+
         <!--[if lt IE 9]>
         script(src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js")
