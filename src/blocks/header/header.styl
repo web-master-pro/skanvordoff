@@ -1,10 +1,137 @@
 .header
-    width: 100%;
-    position: relative;
+    width 100%
+    position relative
+    background-color transparent
+    &--home
+        +above(751px)
+            background #10101d url(img/header-bg.jpg) no-repeat center center
+            background-attachment fixed
+            background-size cover
+    &--fixed
+        position fixed
+        top 0
+        left 0
+        right 0
+        z-index 500
 
     &__in
         container(1000px)
-        padding 40px 20px
+        padding 0
+        height 61px
+        overflow hidden
+        transition height .3s ease, background-color .3s ease
+        ^[0]--expanded &
+            height 160px
+            border-radius 0
+            background-color #fff
+            border-bottom 3px solid #333348
+            +above(1001px)
+                height 61px
+            +above(751px)
+                height 120px
+                border-radius 0 0 7px 7px
+                background-color #45455c
+                border-bottom none
+        ^[0]--home &
+            +above(751px)
+                &
+                ^[0]--expanded &
+                    padding 29px 20px 80px
+                    height 550px
+                    background-color transparent
+
+    &__top
+        display block
+        height 61px
+        background-color #2f2f44
+        position relative
+        margin-left 20px
+        margin-right 20px
+        +above(1001px)
+            border-radius 0 0 7px 7px
+            margin-right 0
+
+        ^[0]--home &
+            +above(751px)
+                background-color transparent
+                margin 0 0 80px 0
+
+    &__logo
+        margin 0
+        border-radius 0 0 0 9px
+        position absolute
+        top 0
+        left -20px
+        ^[0]--home &
+            +above(751px)
+                border-radius 0
+                left 30px
 
     &__title
+        display none
+        max-width 700px
+        color white
+        font(Glasten)
+        font-size 58px
+        font-weight 400
+        line-height 1.12
+        text-transform uppercase
         text-align center
+        text-shadow 0 0 32px black
+        margin 0 auto 70px
+        ^[0]--home &
+            +above(751px)
+                display block
+
+    &__search-toggle
+        display none
+        width 61px
+        height 61px
+        background-color #f51f47
+        border none
+        border-radius 0 0 7px 0
+        color transparent
+        font-size 0
+        cursor pointer
+        position absolute
+        top 0
+        right -20px
+        z-index 100
+        &:hover
+            background-color #fd3a5e
+        &.active
+            background-color #fd3a5e
+            &::after
+                content ""
+                display block
+                width 0
+                height 0
+                border-style solid
+                border-width 10px 10px 0 10px
+                border-color #fd3a5e transparent transparent transparent
+                position absolute
+                top 100%
+                left 20px
+        &::before
+            content ""
+            display block
+            width 29px
+            height 29px
+            background-image embedurl("../../svg/zoom3.svg", "")
+            background-position 0 0
+            background-repeat no-repeat
+            background-size contain
+            position absolute
+            top 17px
+            left 17px
+        +below(1000px)
+            display block
+        ^[0]--home &
+            +above(751px)
+                display none
+
+    &__search
+        margin 0
+        ^[0]--home &
+            +above(751px)
+                margin 0 auto

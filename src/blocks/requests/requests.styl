@@ -5,19 +5,34 @@
     border-radius 3px
     box-shadow 0 0 18px rgba(0, 0, 0, 0.08)
     padding 30px 30px 40px
-    margin 0 0 120px
-    display flex
-    flex-flow row nowrap
-    justify-content center
+    margin 0 0 40px
     +below(1010px)
         padding-left 25px
         padding-right 25px
-        margin-bottom 90px
+        margin 0 0 15px
     +below(750px)
-        padding 55px 20px 30px
-        margin-bottom 80px
-        flex-wrap wrap
-        align-items center
+        &--home
+            padding 55px 20px 30px
+
+    &__title
+        color #2f2f44
+        font(Medium)
+        font-size 17px
+        line-height 1
+        text-transform uppercase
+        padding-bottom 20px
+        border-bottom 1px solid #d9d9d9
+        margin 0 0 30px
+
+
+    &__main
+        width 100%
+        display flex
+        flex-flow row nowrap
+        justify-content center
+        +below(750px)
+            flex-wrap wrap
+            align-items center
 
     &__block
         flex 1 1 420px
@@ -27,11 +42,17 @@
                 margin-right 60px
             +below(750px)
                 margin-right 0
-                margin-bottom 90px
+                ^[0]--home &
+                    margin-bottom 90px
         +below(750px)
             flex 0 1 420px
+            &:last-child
+                display none
+                ^[0]--home &
+                    display block
 
-    &__title
+
+    &__caption
         position relative
         text-align center
         margin 0 0 31px

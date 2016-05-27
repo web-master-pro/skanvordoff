@@ -1,4 +1,19 @@
+include ../logo/logo
+include ../search/search
+
+mixin header-home()
+    header.header.header--home&attributes(attributes)
+        .header__in
+            .header__top
+                +logo(class="header__logo")
+                button(title="Поиск").header__search-toggle
+            h1.header__title Найди ответ на свой сканворд
+            +search(class="header__search")
+
 mixin header()
     header.header&attributes(attributes)
         .header__in
-            h1.header__title Snanvordoff
+            .header__top
+                +logo(class="header__logo")
+                button(title="Поиск").header__search-toggle
+            +search(class="header__search")

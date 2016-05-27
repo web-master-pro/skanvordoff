@@ -23,5 +23,6 @@
 
 // Place any jQuery/helper plugins in here.
 
-//= ../bower/magnific-popup/dist/jquery.magnific-popup.js
+// libs/isotope.pkgd.js
+//= libs/packery.pkgd.js
 //= libs/smoothscroll.js

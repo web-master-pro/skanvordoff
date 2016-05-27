@@ -1,0 +1,54 @@
+.layout
+    container(1000px)
+    display flex
+    flex-flow row wrap
+    justify-content center
+    padding 40px 10px 80px
+
+    &__top
+        width 100%
+        flex 1 1 auto
+        order 1
+
+    &__main
+        width 100%
+        flex 1 1 auto
+        order 2
+
+    &__sidebar
+        width 100%
+        flex 1 1 auto
+        order 3
+
+    &--sidebar-right
+    &--sidebar-left
+        padding 60px 10px 60px
+        +above(751px)
+            padding-left 35px
+            padding-right 35px
+            justify-content space-between
+        +above(1001px)
+            padding-left 10px
+            padding-right 10px
+            & ^[0]__main
+                width 700px
+                flex 1 1 auto
+            & ^[0]__sidebar
+                width 240px
+                flex 0 0 auto
+
+    &--sidebar-right
+        +above(1001px)
+            & ^[0]__sidebar
+                margin-left 10px
+        +below(1000px)
+            & ^[0]__sidebar
+                padding-top 0 !important
+    &--sidebar-left
+        +above(1001px)
+            & ^[0]__sidebar
+                order 1
+                margin-right 10px
+
+
+

@@ -1,0 +1,233 @@
+.search
+    display block
+    width 680px
+    height 40px
+    position absolute
+    left 272px
+    top 10px
+    +below(1000px)
+        display none
+        .header--expanded &
+            display block
+            top 70px
+            left 50%
+            margin-left -340px
+    +below(750px)
+        .header--expanded &
+            display block
+            width 100%
+            height 96px
+            top 61px
+            left 0
+            right 0
+            margin-left 0
+
+    .header--home &
+        +above(751px)
+            display block
+            width 710px
+            height 110px
+            position relative
+            left auto
+            top auto
+        +above(1001px)
+            width 865px
+
+    &__input
+        display block
+        height 40px
+        background-color white
+        border none
+        padding 0 28px
+        color #3d3d3d
+        font-size 16px
+        line-height 40px
+        position absolute
+
+        &::-webkit-input-placeholder
+            color #3d3d3d
+            opacity 1
+        &::-moz-placeholder
+            color #3d3d3d
+            opacity 1
+        &:-moz-placeholder
+            color #3d3d3d
+            opacity 1
+        &:-ms-input-placeholder
+            color #3d3d3d
+            opacity 1
+        &:input-placeholder
+            color #3d3d3d
+            opacity 1
+        &:focus::-webkit-input-placeholder
+            color #ddd
+            opacity 1
+        &:focus::-moz-placeholder
+            color #ddd
+            opacity 1
+        &:focus:-moz-placeholder
+            color #ddd
+            opacity 1
+        &:focus:-ms-input-placeholder
+            color #ddd
+            opacity 1
+        &:focus:input-placeholder
+            color #ddd
+            opacity 1
+
+        +below(750px)
+            color #616173
+            &::-webkit-input-placeholder
+                color #616173
+            &::-moz-placeholder
+                color #616173
+            &:-moz-placeholder
+                color #616173
+            &:-ms-input-placeholder
+                color #616173
+            &:input-placeholder
+                color #616173
+
+        &--1
+            width 228px
+            top 0
+            left 0
+            border-radius 20px 0 0 20px
+            +below(750px)
+                width 100%
+                height 49px
+                top 0
+                left 0
+                right 0
+                border-bottom 2px solid #eaeaea
+                border-radius 0
+        &--2
+            width 308px
+            top 0
+            left 231px
+            border-radius 0 20px 20px 0
+            +below(750px)
+                width 100%
+                height 47px
+                top 49px
+                left 0
+                right 0
+                border-radius 0
+                background-color #f8f8f8
+
+
+        .header--home &
+            +above(751px)
+                height 60px
+                background-color white
+                padding 0 30px 0 45px
+                font()
+                font-size 20px
+                line-height 60px
+                margin 0
+                &--1
+                    width 322px
+                    top 26px
+                    left 0
+                    right auto
+                    border-radius 25px
+                &--2
+                    width 322px
+                    top 26px
+                    left auto
+                    right 0
+                    border-radius 25px
+            +above(1001px)
+                &--1
+                    width 395px
+                &--2
+                    width 395px
+
+    &__example
+        display none
+        color #c3c3c3
+        font()
+        font-size 14px
+        line-height 1
+        text-decoration underline
+        margin 0
+        position absolute
+        top 92px
+        &--1
+            left 53px
+        &--2
+            left 446px
+        a
+            display inline-block
+            color #c3c3c3
+            text-decoration underline
+            &:hover
+                color @color
+                text-decoration none
+        .header--home &
+            +above(1001px)
+                &--2
+                    left 525px
+            +above(751px)
+                display inline-block
+
+    &__button
+        width 124px
+        height 40px
+        background-color #f51f47
+        border none
+        border-radius 20px
+        color white
+        font(Medium)
+        font-size 17px
+        line-height 1
+        text-transform lowercase
+        text-align center
+        transition background-color .3s ease, transform .3s ease
+        cursor pointer
+        position absolute
+        top 0
+        left auto
+        right 0
+        margin 0
+        &:hover
+            background-color #fd3a5e
+            transform none
+        &::before
+            display none
+
+        +below(750px)
+            right 10px
+            top 28px
+
+        .header--home &
+            +above(751px)
+                width 100px
+                height 100px
+                background-color #f51f47
+                border none
+                border-radius 50%
+                box-shadow 0 0 6px rgba(0, 0, 0, 0.49)
+                color transparent
+                font-size 0
+                position absolute
+                top 5px
+                left 50%
+                right auto
+                margin-left -50px
+                transform-origin center center
+                &:hover
+                    background-color #f51f47
+                    transform scale(1.05)
+                &::before
+                    content ""
+                    display block
+                    width 55px
+                    height 55px
+                    background-image embedurl("../../svg/zoom1.svg", "")
+                    background-position 0 0
+                    background-repeat no-repeat
+                    background-size contain
+                    position absolute
+                    top 23px
+                    left 23px

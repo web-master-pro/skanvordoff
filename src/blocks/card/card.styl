@@ -1,0 +1,77 @@
+.card
+    display block
+    background-color white
+    border 1px solid #ebebeb
+    border-radius 2px
+    box-shadow 0 0 18px rgba(0, 0, 0, 0.08)
+    padding 0
+    margin 0 0 15px
+    .two-columns &
+        width 49%
+        margin-bottom: 0
+        +below(750px)
+            width 100%
+
+    &__in
+        display block
+        width 100%
+        padding 20px
+        margin 0
+
+    &__header
+        padding 0 0 15px
+        border-bottom 1px solid #d9d9d9
+        margin 0 0 15px
+        display flex
+        flex-flow row nowrap
+        justify-content space-between
+
+    &__title
+        color #2f2f44
+        font(Medium)
+        font-size 17px
+        line-height 1
+        text-transform uppercase
+        margin 7px 0 0 0
+        a
+            color #2f2f44
+            text-decoration none
+            &:hover
+                color @color
+                text-decoration undeline
+
+    &__list
+        display block
+        list-style none
+        padding 0
+        margin 0
+
+    &__item
+        display block
+        color #3d3d3d
+        font()
+        font-size 16px
+        line-height 1.125
+        padding 0
+        margin 4px 0
+
+    &__footer
+        width 100%
+        border-top 1px dashed #f51f47
+        padding 14px
+        margin 0
+
+    &__more-link
+        display block
+        color #f51f47
+        font()
+        font-size 14px
+        line-height 1
+        text-align center
+        text-decoration none
+        margin 0
+        &:hover
+            color @color
+            text-decoration none
+
+

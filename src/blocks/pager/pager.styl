@@ -1,0 +1,99 @@
+.pager
+    width 100%
+    display flex
+    flex-flow row nowrap
+    justify-content space-between
+    align-items flex-start
+    margin 30px 0 40px
+
+    &__total
+        display inline-block
+
+    &__total-caption
+        display inline-block
+        vertical-align middle
+        color #3d3d3d
+        font()
+        font-size 16px
+        line-height 1
+        margin 0 5px 0 0
+
+    &__total-value
+        display inline-block
+        vertical-align middle
+        height 34px
+        background-color #3d3d3d
+        color white
+        font(Medium)
+        font-size 16px
+        line-height 1
+        padding 9px 18px
+        border-radius 30px
+
+    &__nav
+        display inline-flex
+        flex-flow row nowrap
+        align-items center
+        list-style none
+        padding 0
+        margin 0
+
+    &__page
+        margin-left 5px
+    &__link
+        display inline-block
+        width 34px
+        height 34px
+        background-color #3d3d3d
+        color white
+        font-size 16px
+        font(Medium)
+        line-height 1
+        text-align center
+        padding 9px
+        border-radius 50%
+        text-decoration none
+        transition background-color .2s ease
+        &:hover
+        ^[0]__page.active &
+            color @color
+            text-decoration none
+            background-color #f51f47
+        ^[0]__page--prev &
+            position relative
+            &::before
+                content ""
+                display block
+                width 10px
+                height 10px
+                border-top 2px solid white
+                border-left 2px solid white
+                transform rotate(-45deg)
+                position absolute
+                top 12px
+                right 10px
+        ^[0]__page--next &
+            position relative
+            &::before
+                content ""
+                display block
+                width 10px
+                height 10px
+                border-top 2px solid white
+                border-right 2px solid white
+                transform rotate(45deg)
+                position absolute
+                top 12px
+                left 10px
+        ^[0]__page--next &
+        ^[0]__page--prev &
+            color transparent
+            +above(481px)
+                color white
+                font-size 16px
+                width auto
+                padding 9px 18px
+                border-radius 30px
+                &::before
+                &::after
+                    display none

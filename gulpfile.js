@@ -121,16 +121,16 @@ gulp.task('js:app', function () {
         .pipe(gulp.dest("dist/assets/js/"))
 });
 
-// gulp.task('js:plugins', function () {
-//     return gulp.src("src/js/plugins.js")
-//         .pipe(plumber(options.plumber))
-//         .pipe(rigger())
-//         .pipe(rename('plugins.js'))
-//         .pipe(gulp.dest("src/tmp/"))
-//         .pipe(uglify())
-//         .pipe(rename({suffix: '.min'}))
-//         .pipe(gulp.dest("dist/assets/js/"))
-// });
+gulp.task('js:plugins', function () {
+    return gulp.src("src/js/plugins.js")
+        .pipe(plumber(options.plumber))
+        .pipe(rigger())
+        .pipe(rename('plugins.js'))
+        .pipe(gulp.dest("src/tmp/"))
+        .pipe(uglify())
+        .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest("dist/assets/js/"))
+});
 
 gulp.task('js:jquery', function() {
     return gulp.src("src/bower/jquery/dist/jquery.min.js")
@@ -138,8 +138,7 @@ gulp.task('js:jquery', function() {
         .pipe(gulp.dest("dist/assets/js/"))
 });
 
-// gulp.task('js', ['js:jquery','js:plugins','js:app']);
-gulp.task('js', ['js:jquery','js:app']);
+gulp.task('js', ['js:jquery','js:plugins','js:app']);
 
 // IMAGES, PNG SPRITE, Favicons
 
@@ -183,6 +182,11 @@ gulp.task('watch', function (cb) {
     watch(["src/js/common.js", "src/js/inc/*.js", "src/blocks/**/*.js"], function(event, cb) {
         runSequence('js:app', browserSync.reload);
         notify("JS Application").write('');
+    });
+
+    watch(["src/js/plugins.js"], function(event, cb) {
+        runSequence('js:plugins', browserSync.reload);
+        notify("JS Plugins").write('');
     });
 
     watch("src/img/*.*", function(event, cb) {

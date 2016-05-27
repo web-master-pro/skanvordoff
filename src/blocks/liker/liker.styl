@@ -1,0 +1,51 @@
+.liker
+    display inline-block
+    text-align right
+    padding-top 5px
+    color #6c6c6c
+    font()
+    font-size 14px
+    line-height 1
+    margin 0
+
+    &__caption
+        display inline-block
+        vertical-align middle
+        margin-right 1.2em
+        +below(750px)
+            display none
+
+    &__likes
+    &__dislikes
+        display inline-block
+        vertical-align middle
+        color #3d3d3d
+        font()
+        font-size 14px
+        line-height 1
+        text-decoration none
+        &:hover
+            color @color
+            text-decoration none
+        &::before
+            content ""
+            display inline-block
+            vertical-align middle
+            width 22px
+            height 22px
+            position relative
+            margin-right .2em
+            background-position 0 0
+            background-repeat no-repeat
+            background-size contain
+
+    &__likes
+        margin-right: .7em
+        &::before
+            top -1px
+            background-image embedurl("../../svg/like.svg", "")
+    &__dislikes
+        &::before
+            top 1px
+            background-image embedurl("../../svg/dislike.svg", "")
+

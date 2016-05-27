@@ -34,26 +34,55 @@ html(lang="ru")
         meta(name="theme-color" content="#ffffff")
 
         style.
-            body {background: #fff; min-width: 320px;}
-            .page-list {box-sizing: border-box; width:100%; max-width: 1000px; padding: 20px; margin: auto;}
-            .page-list__title {font-family: 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'; font-size: 30px;  font-weight: normal; margin: 10px 0 30px;}
-            .page-list__list {padding: 0; margin: 0;}
-            .page-list__item {box-sizing: border-box; font-family: 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'; list-style: none; padding: 0 0 20px; font-size: 14px; margin: 0;}
-            .page-list__link, .page-list__link:visited {display: inline-block; height: 15px; color: #290656;          text-decoration: underline;}
-            .page-list__link:hover {text-decoration: none; color: #374EC5;}
-            .page-list__spacer, .page-list__file-name {color: #999;font-size: 14px;font-family: 'Cambria', 'Georgia', 'serif';font-style: italic;padding: 5px 0 10px 10px;margin: 0;}
-            .page-list__item--top-line {border-top: 1px solid #ccc;padding-top: 20px;}
+            body {min-width: 320px; color: #444; font-size: 18px; font-family: 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';font-weight: normal; line-height: 1.2; background-color: #fff; padding: 20px; margin: 0;}
+            .page__in {display: block; width: 100%; max-width: 800px; margin: 0 auto;}
+            .page__text {margin: 0 0 1.25em}
+            .page__title {font-size: 32px;}
+            .page__title-2 {font-size: 24px; border-top: 1px solid #ccc; padding-top: 20px;}
+            .page__title-3 {font-size: 18px; font-weight: normal;}
+            .page__link {color: #036; text-decoration: underline;}
+            .page__link:hover {color: #c00;  text-decoration: none;}
+            .page__link--disabled, .page__link--disabled:hover {color: #999; cursor: default; text-decoration: underline;}
+            .page__block {padding-left: 20px;}
+            .page__line {color: #555; background-color:#555; border: none; height: 1px; margin: 0 0 1.25em;}
 
     body.page
-        .page-list
-            h1.page-list__title Список страниц проекта "Skanvordoff"
-            ul.page-list__list
-                li.page-list__item
-                    a(href="home.html").page-list__link Главная страница
-                    span.page-list__spacer —
-                    span.page-list__file-name 'home.html'
+        .page__in
+
+            h1.page__title Список страниц проекта "Skanvordoff"
+            p.page__text Архив со всеми файлами: <a href="javascript:void(0);" target="_blank" class="page__link page__link--disabled">skanvordoff.zip</a> (пока недоступен)
+            hr.page__line
+
+            p.page__text 1. <a href="home.html" target="_blank" class="page__link"> Главная страница</a> (одна на все варианты)
+
+            hr.page__line
+            
+            h3.page__title-3 2. Вторая страница "Слова" (4 варианта):</h3>
+            .page__block
+                p.page__text <a href="words-right-one.html" target="_blank" class="page__link">cайдбар справа, по центру 1 колонка<a>
+                p.page__text <a href="words-left-one.html" target="_blank" class="page__link">cайдбар слева, по центру 1 колонка<a>
+                p.page__text <a href="words-right-two.html" target="_blank" class="page__link">cайдбар справа, по центру 2 колонки<a>
+                p.page__text <a href="words-left-two.html" target="_blank" class="page__link">cайдбар слева, по центру 2 колонки<a>
+            
+            hr.page__line
+            //- 
+            //- h3.page__title-3 3. Третья страница "Слово" (2 варианта):</h3>
+            //- .page__block
+            //-     p.page__text <a href="word-right.html" target="_blank" class="page__link">cайдбар справа<a>
+            //-     p.page__text <a href="word-left.html" target="_blank" class="page__link">cайдбар слева<a>
+            //- 
+            //- hr.page__line 
+            //-     
+            //- h3.page__title-3 4. Четвертая страница "Буквы" (2 варианта):</h3>
+            //- .page__block
+            //-     p.page__text <a href="letters-right.html" target="_blank" class="page__link">cайдбар справа<a>
+            //-     p.page__text <a href="letters-left.html" target="_blank" class="page__link">cайдбар слева<a>
+
+            //- hr.page__line 
+            //- 
+            //- h3.page__title-3 5. Пятая страница "Буквы Демо" (2 варианта):</h3>
+            //- .page__block
+            //-     p.page__text <a href="letters-demo-right.html" target="_blank" class="page__link">cайдбар справа<a>
+            //-     p.page__text <a href="letters-demo-left.html" target="_blank" class="page__link">cайдбар слева<a>
+
                 
-                //- li.page-list__item.page-list__item--top-line
-                //-     a(href="archive.zip").page-list__link Архив со всеми файлами
-                //-     span.page-list__spacer —
-                //-     span.page-list__file-name 'archive.zip'

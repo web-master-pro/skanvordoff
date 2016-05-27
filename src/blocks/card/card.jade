@@ -1,0 +1,46 @@
+include ../liker/liker
+
+mixin card-1()
+    article.card&attributes(attributes)
+        .card__in
+            header.card__header
+                h2.card__title
+                    a(href="#") Эмомали
+                +liker(class="card__liker")
+            ul.card__list
+                li.card__item имя президента Таджикистана Рахмонова
+
+mixin card-2()
+    article.card&attributes(attributes)
+        .card__in
+            header.card__header
+                h2.card__title
+                    a(href="#") Эскорт
+                +liker(class="card__liker")
+            ul.card__list
+                li.card__item военный конвой
+                li.card__item военный конвой, охрана
+                li.card__item группа кораблей, самолетов, воинское подразделение, назначенное для охранения и сопровождения в пути
+        footer.card__footer
+            a(href="#").card__more-link &lt;&lt; Посмотреть полностью &gt;&gt;
+
+mixin card-3()
+    article.card&attributes(attributes)
+        .card__in
+            header.card__header
+                h2.card__title
+                    a(href="#") Экстази
+                +liker(class="card__liker")
+            ul.card__list
+                li.card__item наркотик
+
+mixin card-4()
+    article.card&attributes(attributes)
+        .card__in
+            header.card__header
+                h2.card__title
+                    a(href="#") Экванзи
+                +liker(class="card__liker")
+            ul.card__list
+                li.card__item Сиприан (родился в 1921) нигерийский писатель, романы "Люди города", ...
+

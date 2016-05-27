@@ -1,18 +1,20 @@
 include ../blocks/browsehappy/browsehappy
 include ../blocks/header/header
-include ../blocks/how/how
+include ../blocks/card/card
+include ../blocks/advert/advert
+include ../blocks/pager/pager
 include ../blocks/requests/requests
 include ../blocks/footer/footer
 
 doctype html
 
-// Верстка сайта: http://web-master-pro.ru 
+// Верстка сайта: http://web-master-pro.ru
 
 html(lang="ru-RU")
 
     head
         meta(charset="utf-8")
-        title Главная страница | Skanvordoff
+        title Слова - сайдбар слева -1 колонка по центру | Skanvordoff
         meta(name="description" content="")
         meta(name="keywords" content="")
 
@@ -45,16 +47,32 @@ html(lang="ru-RU")
 
     body
         +browsehappy()
-        +header-home()
-        .layout
+        +header()
+        .layout.layout--sidebar-left
             .layout__main
                 main.content
-                    +how()
-                    +requests-home()
+                    .content__top
+                        h1.content__title Слова из 7 букв, 1 буква Э, 7 буква И
+                        p.content__subtitle Варианты ответов к сканвордам и кроссвордам
+                    .content__main
+                        +card-1()
+                        +advert()
+                        +card-2()
+                        +card-3()
+                        +card-4()
+                +pager-1()
+                +requests()
+            .layout__sidebar
+                aside.sidebar
+                    .sidebar__section
+                        a(href="#").sidebar__link
+                            img(src="assets/img/sample-sidebar-banner-1.jpg" alt="").sidebar__banner
+                    .sidebar__section
+                        a(href="#").sidebar__link
+                            img(src="assets/img/sample-sidebar-banner-2.jpg" alt="").sidebar__banner
         +footer()
 
         script(src="https://code.jquery.com/jquery-2.2.4.min.js")
         script window.jQuery || document.write('<script src="assets/js/jquery.min.js"><\/script>')
         script(src="assets/js/plugins.min.js?rev=@@hash")
         script(src="assets/js/app.min.js?rev=@@hash")
-        

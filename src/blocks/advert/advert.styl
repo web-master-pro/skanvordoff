@@ -1,0 +1,60 @@
+.advert
+    padding 20px
+    background-color white
+    border 1px solid #ebebeb
+    border-radius 3px
+    box-shadow 0 0 18px rgba(0, 0, 0, 0.08)
+    display flex
+    flex-flow row nowrap
+    justify-content space-between
+    margin-bottom: 15px
+    .two-columns &
+        width 49%
+        margin-bottom: 0
+        +below(750px)
+            width 100%
+    +below(800px)
+        justify-content space-around
+    +below(520px)
+        flex-wrap wrap
+
+    &__ad
+        display block
+        position relative
+        width 220px
+        flex 0 1 auto
+        .two-columns &
+            width 100%
+        +below(800px)
+            &:nth-child(3)
+                display none
+        +below(520px)
+            width 100%
+            margin-top 20px
+            &:first-child
+                margin-top 0
+
+    &__link
+        width 100%
+        display flex
+        flex-flow row nowrap
+        text-decoration none
+        &:hover
+            color #3d3d3d
+            text-decoration none
+
+    &__img
+        display block
+        width 100px
+        height 100px
+        margin-right 10px
+        flex 0 0 100px
+
+    &__caption
+        flex 1 1 auto
+        align-self center
+        color #3d3d3d
+        font()
+        font-size 14px
+        line-height 1.5
+        margin 0

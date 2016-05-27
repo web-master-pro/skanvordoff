@@ -3,30 +3,57 @@ mixin request(query, results)
         .request__query #{query} 
         .request__results #{results}
 
+mixin requests-home()
+    section.requests.requests--home&attributes(attributes)
+        .requests__main
+            .requests__block
+                h2.requests__caption
+                    span Популярные запросы
+                ul.requests__list
+                    +request("спутник сатурна", "39 результатов")
+                    +request("болотная птица", "106 результатов")
+                    +request("серые клеточки", "4 результатов")
+                    +request("поделочный камень", "118 результатов")
+                    +request("рыба семейства вьюновых", "6 результатов")
+                    +request("буква и", "600 результатов")
+                    +request("хищная птица", "41 результатов")
+                a(href="").requests__more-link &lt;&lt; Смотреть все &gt;&gt;
+
+            .requests__block
+                h2.requests__caption
+                    span Последние запросы
+                ul.requests__list
+                    +request("инструмент земли", "41 результатов")
+                    +request("(*****)холя", "180 результатов")
+                    +request("серые клеточки", "4 результатов")
+                    +request("поделочный камень", "118 результатов")
+                    +request("рыба семейства вьюновых", "6 результатов")
+                    +request("буква и", "600 результатов")
+                    +request("хищная птица", "41 результатов")
+                a(href="").requests__more-link &lt;&lt; Смотреть все &gt;&gt;
+
 mixin requests()
     section.requests&attributes(attributes)
-        .requests__block
-            h2.requests__title
-                span Популярные запросы
-            ul.requests__list
-                +request("спутник сатурна", "39 результатов")
-                +request("болотная птица", "106 результатов")
-                +request("серые клеточки", "4 результатов")
-                +request("поделочный камень", "118 результатов")
-                +request("рыба семейства вьюновых", "6 результатов")
-                +request("буква и", "600 результатов")
-                +request("хищная птица", "41 результатов")
-            a(href="").requests__more-link &lt;&lt; Смотреть все &gt;&gt;
+        h2.requests__title Эти слова находили так же по следующим запросам:
+        .requests__main
+            .requests__block
+                ul.requests__list
+                    +request("спутник сатурна", "39 результатов")
+                    +request("болотная птица", "106 результатов")
+                    +request("серые клеточки", "4 результатов")
+                    +request("поделочный камень", "118 результатов")
+                    +request("рыба семейства", "6 результатов")
+                    +request("буква и", "600 результатов")
+                    +request("хищная птица", "41 результатов")
+                a(href="").requests__more-link &lt;&lt; Смотреть все &gt;&gt;
 
-        .requests__block
-            h2.requests__title
-                span Последние запросы
-            ul.requests__list
-                +request("инструмент земли", "41 результатов")
-                +request("(*****)холя)", "180 результатов")
-                +request("серые клеточки", "4 результатов")
-                +request("поделочный камень", "118 результатов")
-                +request("рыба семейства вьюновых", "6 результатов")
-                +request("буква и", "600 результатов")
-                +request("хищная птица", "41 результатов")
-            a(href="").requests__more-link &lt;&lt; Смотреть все &gt;&gt;
+            .requests__block
+                ul.requests__list
+                    +request("спутник сатурна", "39 результатов")
+                    +request("болотная птица", "106 результатов")
+                    +request("серые клеточки", "4 результатов")
+                    +request("поделочный камень", "118 результатов")
+                    +request("рыба семейства", "6 результатов")
+                    +request("буква и", "600 результатов")
+                    +request("хищная птица", "41 результатов")
+                a(href="").requests__more-link &lt;&lt; Смотреть все &gt;&gt;

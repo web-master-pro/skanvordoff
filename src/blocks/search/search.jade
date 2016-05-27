@@ -1,0 +1,9 @@
+mixin search()
+    form(action="#" method="POST").search&attributes(attributes)
+        input(type="text" name="word" placeholder="Поиск по слову").search__input.search__input--1
+        p.search__example.search__example--1
+            a(href="#") Например: *р**к*й**
+        input(type="text" name="question" placeholder="Поиск по вопросу").search__input.search__input--2
+        p.search__example.search__example--2
+            a(href="#") Например: бог виноделия
+        button(type="submit").search__button найти
