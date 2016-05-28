@@ -1,5 +1,60 @@
 include ../liker/liker
 
+mixin card-single()
+    article.card&attributes(attributes)
+        .card__in
+            header.card__header
+                h2.card__title
+                    a(href="#") ЯСТВО
+                +liker(class="card__liker")
+            ul.card__list
+                li.card__item блюдо, которым следует закусывать "мед-пиво", текущее по бороде
+                li.card__item блюдо, приготовленное по-царски
+                li.card__item еда, кушанье
+                li.card__item изысканная еда
+                li.card__item как называют еду в русских сказках
+                li.card__item паштет из языков павлина с точки зрения гурмана
+                li.card__item царское угощение
+                li.card__item снедь на столе
+                li.card__item блюдо для гурмана
+                li.card__item радость для гурмана
+                li.card__item одно из немногих, от которых ломятся столы
+                li.card__item что доставляет истинное наслаждение гурману?
+                li.card__item угощение
+                li.card__item блюдо по старинке
+                li.card__item вкусное блюдо раньше
+                li.card__item вкусное блюдо в старину
+                li.card__item блюдо на барском столе
+                li.card__item просто сказочное кушанье
+                li.card__item вкусное угощение
+                li.card__item вкусное угощение на пиру
+                li.card__item вкуснятина в старину
+                li.card__item кушанье на сказочном пиру
+                li.card__item кушанье на царском столе
+                li.card__item еда с царского стола
+                li.card__item еда со смаком
+                li.card__item кушанье
+                li.card__item разносол, лакомство, кушанье, деликатес
+                li.card__item блюдо, достойное царского стола
+                li.card__item вкусное блюдо
+                li.card__item кушанье, разносол
+                li.card__item сказочный деликатес
+                li.card__item от него ломятся столы
+                li.card__item кушанье, от которого ломится стол
+                li.card__item блюдо с царского стола
+                li.card__item деликатес на сказочном пиру
+                li.card__item кушанье на княжеском столе
+                li.card__item вкусное блюдо, деликатес
+                li.card__item любое на скатерти-самобранке
+                li.card__item харч по-королевски
+                li.card__item разносол на пиру
+                li.card__item еда (устар.)
+                li.card__item сказочное угощение
+                li.card__item кушанье княжеского пира
+                li.card__item кушанье (устар.)
+                li.card__item величественная еда
+                li.card__item так вкусно, что язык проглотишь
+
 mixin card-1()
     article.card&attributes(attributes)
         .card__in

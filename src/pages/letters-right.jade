@@ -1,20 +1,19 @@
 include ../blocks/browsehappy/browsehappy
 include ../blocks/header/header
-include ../blocks/card/card
-include ../blocks/advert/advert
+include ../blocks/words/words
 include ../blocks/pager/pager
-include ../blocks/requests/requests
+include ../blocks/stat/stat
 include ../blocks/footer/footer
 
 doctype html
 
-// Верстка сайта: http://web-master-pro.ru
+// Верстка сайта: http://web-master-pro.ru 
 
 html(lang="ru-RU")
 
     head
         meta(charset="utf-8")
-        title Слова - сайдбар слева - 1 колонка по центру | Skanvordoff
+        title Буквы - сайдбар справа | Skanvordoff
         meta(name="description" content="")
         meta(name="keywords" content="")
 
@@ -48,25 +47,19 @@ html(lang="ru-RU")
     body
         +browsehappy()
         +header()
-        .layout.layout--sidebar-left
+        .layout.layout--sidebar-right
             .layout__main
                 main.content
                     .content__top
-                        h1.content__title Слова из 7 букв, 1 буква Э, 7 буква И
-                        p.content__subtitle Варианты ответов к сканвордам и кроссвордам
-                    .content__main
-                        +card-1()
-                        +advert()
-                        +card-2()
-                        +card-3()
-                        +card-4()
-                    +pager-1(class="content__pager")
-                +requests()
+                        h1.content__title Слова из 3 букв, где искомая на 1 месте
+                    .content__container
+                        .content__left
+                            +words()
+                        .content__right
+                            
             .layout__sidebar
                 aside.sidebar
-                    .sidebar__section
-                        a(href="#").sidebar__link
-                            img(src="assets/img/sample-sidebar-banner-1.jpg" alt="").sidebar__banner
+                    +stat(class="sidebar__stat")
                     .sidebar__section
                         a(href="#").sidebar__link
                             img(src="assets/img/sample-sidebar-banner-2.jpg" alt="").sidebar__banner
