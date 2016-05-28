@@ -45,32 +45,30 @@ html(lang="ru-RU")
 
         link(rel="stylesheet" href="assets/css/style.min.css?rev=@@hash")
 
-    body
-        +browsehappy()
-        +header()
-        .layout.layout--sidebar-left
-            .layout__main
-                main.content
-                    .content__top
-                        h1.content__title Слова из 7 букв, 1 буква Э, 7 буква И
-                        p.content__subtitle Варианты ответов к сканвордам и кроссвордам
-                    .content__main
-                        +card-1()
-                        +advert()
-                        +card-2()
-                        +card-3()
-                        +card-4()
-                    +pager-1(class="content__pager")
-                +requests()
-            .layout__sidebar
-                aside.sidebar
-                    .sidebar__section
-                        a(href="#").sidebar__link
-                            img(src="assets/img/sample-sidebar-banner-1.jpg" alt="").sidebar__banner
-                    .sidebar__section
-                        a(href="#").sidebar__link
-                            img(src="assets/img/sample-sidebar-banner-2.jpg" alt="").sidebar__banner
-        +footer()
+    body.page
+        +browsehappy(class="page__browsehappy")
+        +header(class="page__header")
+        .content.page__content.content--sidebar-left
+            main.main.content__main
+                .main__top
+                    h1.main__title Слова из 7 букв, 1 буква Э, 7 буква И
+                    p.main__subtitle Варианты ответов к сканвордам и кроссвордам
+                .main__main
+                    +card-1()
+                    +advert()
+                    +card-2()
+                    +card-3()
+                    +card-4()
+                +pager-1(class="main__pager")
+                +requests(class="main__requests")
+            aside.sidebar.content__sidebar
+                .sidebar__section
+                    a(href="#").sidebar__link
+                        img(src="assets/img/sample-sidebar-banner-1.jpg" alt="").sidebar__banner
+                .sidebar__section
+                    a(href="#").sidebar__link
+                        img(src="assets/img/sample-sidebar-banner-2.jpg" alt="").sidebar__banner
+        +footer(class="page__footer")
 
         script(src="https://code.jquery.com/jquery-2.2.4.min.js")
         script window.jQuery || document.write('<script src="assets/js/jquery.min.js"><\/script>')

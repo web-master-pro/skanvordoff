@@ -1,40 +1,49 @@
 .content
-    display block
-    width 100%
-
-    &__top
-        dispaly block
-        width 100%
-        padding-bottom 10px
+    container(1000px)
+    display flex
+    flex-flow row wrap
+    justify-content center
+    padding 40px 10px 80px
 
     &__main
-        display block
         width 100%
-
-    &__title
-        color #212121
-        font(Medium)
-        font-size 24px
-        line-height 1
-        margin 0 0 20px
-
-    &__subtitle
-        color #212121
-        font()
-        font-size 16px
-        line-height 1
-        margin 0 0 20px
-
-    &__pager
-        margin 30px 0 40px
-
-    &__container
-        display flex
-        flex-flow row nowrap
-        justify-content space-between
-
-    &__left
         flex 1 1 auto
-    &__right
+        order 1
+
+    &__sidebar
+        width 100%
         flex 1 1 auto
+        order 2
+
+    &--sidebar-right
+    &--sidebar-left
+        padding 60px 10px 60px
+        +above(751px)
+            padding-left 35px
+            padding-right 35px
+            justify-content space-between
+        +above(1001px)
+            padding-left 10px
+            padding-right 10px
+            & ^[0]__main
+                width 700px
+                flex 1 1 auto
+            & ^[0]__sidebar
+                width 240px
+                flex 0 0 auto
+
+    &--sidebar-right
+        +above(1001px)
+            & ^[0]__sidebar
+                margin-left 10px
+        +below(1000px)
+            & ^[0]__sidebar
+                padding-top 0 !important
+    &--sidebar-left
+        +above(1001px)
+            & ^[0]__sidebar
+                order -1
+                margin-right 10px
+
+
 

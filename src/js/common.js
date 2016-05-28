@@ -87,10 +87,10 @@ $(document).ready(function() {
     //     arrangeColumns();
     // });
 
-    if ($(".two-columns").length > 0) {
+    if ($(".main--two-columns").length > 0) {
 
-        $('.content__main').packery({
-            itemSelector: '.content__main .card, .content__main .advert',
+        $('.main__main').packery({
+            itemSelector: '.main__main .card, .main__main .advert',
             gutter: 10
         });
 

@@ -45,25 +45,22 @@ html(lang="ru-RU")
 
         link(rel="stylesheet" href="assets/css/style.min.css?rev=@@hash")
 
-    body
-        +browsehappy()
-        +header()
-        .layout.layout--sidebar-right
-            .layout__main
-                main.content
-                    .content__top
-                        h1.content__title ЯСТВО - сказочное угощение
-                    .content__main
-                        +card-single()
-                +requests()
-
-            .layout__sidebar
-                aside.sidebar
-                    +stat(class="sidebar__stat")
-                    .sidebar__section
-                        a(href="#").sidebar__link
-                            img(src="assets/img/sample-sidebar-banner-2.jpg" alt="").sidebar__banner
-        +footer()
+    body.page
+        +browsehappy(class="page__browsehappy")
+        +header(class="page__header")
+        .content.page__content.content--sidebar-right
+            main.main.content__main
+                .main__top
+                    h1.main__title ЯСТВО - сказочное угощение
+                .main__main
+                    +card-single()
+                +requests(class="main__requests")
+            aside.sidebar.content__sidebar
+                +stat(class="sidebar__stat")
+                .sidebar__section
+                    a(href="#").sidebar__link
+                        img(src="assets/img/sample-sidebar-banner-2.jpg" alt="").sidebar__banner
+        +footer(class="page__footer")
 
         script(src="https://code.jquery.com/jquery-2.2.4.min.js")
         script window.jQuery || document.write('<script src="assets/js/jquery.min.js"><\/script>')
