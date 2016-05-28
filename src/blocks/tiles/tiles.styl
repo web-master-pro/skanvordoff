@@ -1,0 +1,55 @@
+.tiles
+    width 100%
+    display flex
+    flex-flow row wrap
+    justify-content space-between
+    margin-left -3px
+    margin-right -3px
+
+.tile
+    flex 1 1 100%
+    display flex
+    flex-flow column nowrap
+    justify-content center
+    // width 156px
+    height 65px
+    margin 0 3px 6px
+    background-color white
+    border 1px solid #ebebeb
+    border-radius 3px
+    box-shadow 0 0 18px rgba(0, 0, 0, 0.08)
+    text-decoration none
+    transition background-color .3s ease
+    +above(600px)
+        flex 1 1 45%
+    +above(800px)
+        flex 1 1 30%
+    &:hover
+    &.active
+        background-color #2f2f44
+        text-decoration none
+
+    &__caption
+        color #212121
+        font()
+        font-size 16px
+        line-height 1
+        text-align center
+        margin 0
+        transition color .3s ease
+        ^[0]:hover &
+        ^[0].active &
+            color white
+
+    &__value
+        color #212121
+        font(Medium)
+        font-size 16px
+        line-height 1
+        text-align center
+        margin 5px 0 0
+        transition color .3s ease
+        ^[0]:hover &
+        ^[0].active &
+            color white
+

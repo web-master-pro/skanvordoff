@@ -1,8 +1,8 @@
 include ../blocks/browsehappy/browsehappy
 include ../blocks/header/header
 include ../blocks/card/card
+include ../blocks/advert/advert
 include ../blocks/pager/pager
-include ../blocks/stat/stat
 include ../blocks/requests/requests
 include ../blocks/footer/footer
 
@@ -14,7 +14,7 @@ html(lang="ru-RU")
 
     head
         meta(charset="utf-8")
-        title Слово - сайдбар справа | Skanvordoff
+        title Страница 2.3 - сайдбар справа, 1 колонка | Skanvordoff
         meta(name="description" content="")
         meta(name="keywords" content="")
 
@@ -51,12 +51,20 @@ html(lang="ru-RU")
         .content.page__content.content--sidebar-right
             main.main.content__main
                 .main__top
-                    h1.main__title ЯСТВО - сказочное угощение
+                    h1.main__title Слова из 7 букв, 1 буква Э, 7 буква И
+                    p.main__subtitle Варианты ответов к сканвордам и кроссвордам
                 .main__main
-                    +card-single()
+                    +card-1()
+                    +advert()
+                    +card-2()
+                    +card-3()
+                    +card-4()
+                +pager(class="main__pager-bottom pager--full")
                 +requests(class="main__requests")
             aside.sidebar.content__sidebar
-                +stat(class="sidebar__stat")
+                .sidebar__section
+                    a(href="#").sidebar__link
+                        img(src="assets/img/sample-sidebar-banner-1.jpg" alt="").sidebar__banner
                 .sidebar__section
                     a(href="#").sidebar__link
                         img(src="assets/img/sample-sidebar-banner-2.jpg" alt="").sidebar__banner

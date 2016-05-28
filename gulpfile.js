@@ -126,7 +126,7 @@ gulp.task('js:plugins', function () {
         .pipe(plumber(options.plumber))
         .pipe(rigger())
         .pipe(rename('plugins.js'))
-        .pipe(gulp.dest("src/tmp/"))
+        .pipe(gulp.dest("dist/assets/js/"))
         .pipe(uglify())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest("dist/assets/js/"))

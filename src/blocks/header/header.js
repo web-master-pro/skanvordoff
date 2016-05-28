@@ -34,9 +34,7 @@ $(window).scroll(function() {
                 .fadeIn(1000);
         } else {
             $(".header")
-                // .fadeOut(0)
-                .addClass("header--fixed")
-                // .fadeIn(1000);
+                .addClass("header--fixed");
         };
         $(".content").css("margin-top", fix_margin);
     };
@@ -46,7 +44,7 @@ $(window).scroll(function() {
             $(".header")
                 .removeClass("header--fixed")
                 .addClass("header--home")
-                .removeClass("header--index")
+                .removeClass("header--index");
         } else {
             $(".header")
                 .removeClass("header--fixed");

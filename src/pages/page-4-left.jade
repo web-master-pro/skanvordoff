@@ -1,9 +1,9 @@
 include ../blocks/browsehappy/browsehappy
 include ../blocks/header/header
-include ../blocks/card/card
+include ../blocks/words/words
+include ../blocks/tiles/tiles
 include ../blocks/pager/pager
 include ../blocks/stat/stat
-include ../blocks/requests/requests
 include ../blocks/footer/footer
 
 doctype html
@@ -14,7 +14,7 @@ html(lang="ru-RU")
 
     head
         meta(charset="utf-8")
-        title Слово - сайдбар слева | Skanvordoff
+        title Страница 4.1 - сайдбар слева | Skanvordoff
         meta(name="description" content="")
         meta(name="keywords" content="")
 
@@ -51,10 +51,13 @@ html(lang="ru-RU")
         .content.page__content.content--sidebar-left
             main.main.content__main
                 .main__top
-                    h1.main__title ЯСТВО - сказочное угощение
-                .main__main
-                    +card-single()
-                +requests(class="main__requests")
+                    h1.main__title Слова из 3 букв, где искомая на 1 месте
+                .main__row
+                    .main__left
+                        +words()
+                    .main__right
+                        +pager(class="main__pager-tiles")
+                        +tiles-letters(class="main__tiles")
             aside.sidebar.content__sidebar
                 +stat(class="sidebar__stat")
                 .sidebar__section

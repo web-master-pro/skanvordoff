@@ -1,6 +1,7 @@
 mixin the-word(caption, results)
     li.words__item
-        .words__caption #{caption}
+        .words__caption
+            a(href="") #{caption}
         .words__results #{results}
 
 mixin words()

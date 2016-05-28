@@ -23,6 +23,4 @@
 
 // Place any jQuery/helper plugins in here.
 
-// libs/isotope.pkgd.js
-//= libs/packery.pkgd.js
 //= libs/smoothscroll.js

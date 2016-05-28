@@ -1,6 +1,7 @@
 mixin request(query, results)
     li.request&attributes(attributes)
-        .request__query #{query} 
+        .request__query
+            a(href="#") #{query}
         .request__results #{results}
 
 mixin requests-home()

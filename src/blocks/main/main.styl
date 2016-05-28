@@ -24,17 +24,50 @@
         line-height 1
         margin 0 0 20px
 
-    &__pager
+    &__pager-bottom
         margin 30px 0 40px
 
-    &__container
+    &__requests
+        margin 0
+
+    &__row
+        width 100%
         display flex
-        flex-flow row nowrap
+        flex-flow row wrap
         justify-content space-between
+        +above(450px)
+            flex-flow row nowrap
 
     &__left
+        width 100%
         flex 1 1 auto
+        margin-bottom 15px
+        +above(450px)
+            width 220px
+            flex 0 0 auto
+            margin-bottom 0
+        +above(750px)
+            width 240px
+            flex 0 0 auto
 
     &__right
+        width 100%
         flex 1 1 auto
+        display flex
+        flex-flow column nowrap
+        +above(450px)
+            width 400px
+            flex 1 1 auto
+            margin-left 10px
+
+
+    &__tiles
+        margin-bottom 15px
+
+    &__pager-tiles
+        margin 0 0 15px 0
+        padding-right 5px
+        +below(751px)
+            order 2
+
 

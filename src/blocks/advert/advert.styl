@@ -1,22 +1,28 @@
 .advert
-    padding 20px
+    display block
     background-color white
     border 1px solid #ebebeb
     border-radius 3px
     box-shadow 0 0 18px rgba(0, 0, 0, 0.08)
-    display flex
-    flex-flow row nowrap
-    justify-content space-between
-    margin-bottom: 15px
+    padding 0
+    margin 0 0 10px
+    transition all .3s ease
+
     .main--two-columns &
-        width 49%
-        margin-bottom: 0
+        width 40%
         +below(750px)
             width 100%
     +below(800px)
         justify-content space-around
     +below(520px)
         flex-wrap wrap
+
+    &__in
+        width 100%
+        display flex
+        flex-flow row nowrap
+        justify-content space-between
+        padding 20px
 
     &__ad
         display block

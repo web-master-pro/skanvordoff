@@ -1,8 +1,8 @@
 include ../blocks/browsehappy/browsehappy
 include ../blocks/header/header
 include ../blocks/card/card
-include ../blocks/advert/advert
 include ../blocks/pager/pager
+include ../blocks/stat/stat
 include ../blocks/requests/requests
 include ../blocks/footer/footer
 
@@ -14,7 +14,7 @@ html(lang="ru-RU")
 
     head
         meta(charset="utf-8")
-        title Слова - сайдбар слева -2 колонки по центру | Skanvordoff
+        title Страница 3.2 - сайдбар справа | Skanvordoff
         meta(name="description" content="")
         meta(name="keywords" content="")
 
@@ -48,27 +48,15 @@ html(lang="ru-RU")
     body.page
         +browsehappy(class="page__browsehappy")
         +header(class="page__header")
-        .content.page__content.content--sidebar-left
-            main.main.content__main.main--two-columns
+        .content.page__content.content--sidebar-right
+            main.main.content__main
                 .main__top
-                    h1.main__title Слова из 7 букв, 1 буква Э, 7 буква И
-                    p.main__subtitle Варианты ответов к сканвордам и кроссвордам
+                    h1.main__title ЯСТВО - сказочное угощение
                 .main__main
-                    +card-1()
-                    +card-2()
-                    +card-3()
-                    +advert-1()
-                    +card-1()
-                    +card-2()
-                    +advert-2()
-                    +card-2()
-                    +card-4()
-                +pager-1(class="main__pager")
+                    +card-single()
                 +requests(class="main__requests")
             aside.sidebar.content__sidebar
-                .sidebar__section
-                    a(href="#").sidebar__link
-                        img(src="assets/img/sample-sidebar-banner-1.jpg" alt="").sidebar__banner
+                +stat(class="sidebar__stat")
                 .sidebar__section
                     a(href="#").sidebar__link
                         img(src="assets/img/sample-sidebar-banner-2.jpg" alt="").sidebar__banner
