@@ -1,4 +1,4 @@
-# Базовый шаблон для верстки
+# Проект "Skanvordoff" (фронтенд)
 
 ## Установка и сборка:
 1. git clone https://github.com/web-master-pro/skanvordoff
