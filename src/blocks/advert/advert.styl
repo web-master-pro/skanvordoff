@@ -12,10 +12,6 @@
         width 40%
         +below(750px)
             width 100%
-    +below(800px)
-        justify-content space-around
-    +below(520px)
-        flex-wrap wrap
 
     &__in
         width 100%
@@ -23,6 +19,10 @@
         flex-flow row nowrap
         justify-content space-between
         padding 20px
+        +below(800px)
+            justify-content space-around
+        +below(520px)
+            flex-wrap wrap
 
     &__ad
         display block

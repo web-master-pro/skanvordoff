@@ -6,6 +6,7 @@
     border-radius 3px
     box-shadow 0 0 18px rgba(0, 0, 0, 0.08)
     padding 15px 7px 15px 15px
+    transition all 1s ease
 
     &__list
         list-style none
@@ -13,15 +14,26 @@
         width 100%
         padding 0
         margin 0
+        transition all 1s ease
 
     &__item
-        display flex
+        display none
         flex-flow row nowrap
         justify-content space-between
         align-items center
         width 100%
         padding 5px 0
         margin 0
+        &:nth-child(1)
+        &:nth-child(2)
+        &:nth-child(3)
+        &:nth-child(4)
+        &:nth-child(5)
+            display flex
+        ^[0]__list.expanded &
+            display flex
+        +above(450px)
+            display flex
 
     &__caption
         flex 1 1 auto
@@ -49,3 +61,27 @@
         padding 10px 19px
         border-radius 18px
         margin 0
+
+    &__button
+        display block
+        background-color #f51f47
+        border none
+        border-radius 20px
+        color white
+        font(Medium)
+        font-size 17px
+        line-height 1
+        text-align center
+        transition background-color .3s ease, transform .3s ease
+        cursor pointer
+        padding 9px 17px
+        margin 10px auto 0
+        &:hover
+            background-color #fd3a5e
+            transform none
+        +above(450px)
+            display none
+
+    &__button-hide
+        display none
+
